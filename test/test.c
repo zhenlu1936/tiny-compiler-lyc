@@ -10,13 +10,19 @@ struct teacher {
 
 void count_score(int x, int y, int &z) { z = x + y; }
 
+void init_student(struct student &s, int number, int score, char *name) {
+	// s.number = number;
+	// // s.score = score;
+	s.name = name;
+}
+
 int main() {
 	struct student xiaoming;
-	int *a;
-	a = &(xiaoming.name);
-	// xiaoming.score = 1;
-	// a = 1;
-	// a = xiaoming.number;
+	// char *name;
+	// init_student(xiaoming, 114514, 100, name);
+	int a;
+	int *b;
+	a = *b;
 
 	return 0;
 }
