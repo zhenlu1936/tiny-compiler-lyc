@@ -189,7 +189,7 @@ struct arr_info {
 };
 
 struct ptr_info {
-	// int temp_deref_count;
+	int temp_deref_count;
 	int has_initialized;
 };
 
@@ -260,7 +260,6 @@ struct op {
 	struct tac *code;
 	struct id *addr;
 	struct op *next;  // used in continue and break
-	int deref_count;
 };
 
 // used in continue and break
