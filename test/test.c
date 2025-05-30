@@ -9,10 +9,10 @@ struct teacher {
 };
 
 struct classes {
-	int number[10];
+	int number[30];
+	struct student students[30];
+	struct student teacher[30];
 };
-
-void count_score(int x, int y, int &z) { z = x + y; }
 
 void init_student(struct student &s, int number, int score, char *name) {
 	s.number = number;
@@ -22,6 +22,11 @@ void init_student(struct student &s, int number, int score, char *name) {
 
 int main() {
 	struct classes class_1;
-	class_1.number[9] = 20;
+	int i;
+	char name[20];
+	for (i = 0; i < 30; i = i + 1) {
+		init_student(class_1.students[i], i, 100, name);
+	}
+
 	return 0;
 }
